@@ -1,0 +1,13 @@
+h1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.indent {
+    margin-bottom: 30px;
+}
+
+a:hover {
+    cursor: pointer;
+}

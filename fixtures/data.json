@@ -1,0 +1,125 @@
+[{
+    "model": "statistic.team",
+    "pk": 1,
+    "fields": {
+        "name": "Team1",
+        "city": "New York"
+    }
+}, {
+    "model": "statistic.team",
+    "pk": 3,
+    "fields": {
+        "name": "Team3",
+        "city": "Berlin"
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 1,
+    "fields": {
+        "name": "Alex",
+        "age": 22,
+        "height": 178,
+        "experience": 2,
+        "goals": 123,
+        "team": 1
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 2,
+    "fields": {
+        "name": "Ihor",
+        "age": 26,
+        "height": 190,
+        "experience": 4,
+        "goals": 600,
+        "team": 1
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 4,
+    "fields": {
+        "name": "Anton",
+        "age": 27,
+        "height": 185,
+        "experience": 5,
+        "goals": 444,
+        "team": 3
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 5,
+    "fields": {
+        "name": "Bill",
+        "age": 28,
+        "height": 192,
+        "experience": 5,
+        "goals": 367,
+        "team": 3
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 6,
+    "fields": {
+        "name": "Joe",
+        "age": 26,
+        "height": 186,
+        "experience": 4,
+        "goals": 211,
+        "team": 3
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 7,
+    "fields": {
+        "name": "Bruce",
+        "age": 27,
+        "height": 189,
+        "experience": 4,
+        "goals": 221,
+        "team": 3
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 8,
+    "fields": {
+        "name": "Joe",
+        "age": 24,
+        "height": 187,
+        "experience": 3,
+        "goals": 157,
+        "team": 3
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 9,
+    "fields": {
+        "name": "Tom",
+        "age": 26,
+        "height": 190,
+        "experience": 6,
+        "goals": 400,
+        "team": 1
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 10,
+    "fields": {
+        "name": "Martin",
+        "age": 25,
+        "height": 188,
+        "experience": 5,
+        "goals": 356,
+        "team": 1
+    }
+}, {
+    "model": "statistic.player",
+    "pk": 11,
+    "fields": {
+        "name": "Bred",
+        "age": 28,
+        "height": 185,
+        "experience": 6,
+        "goals": 402,
+        "team": 1
+    }
+}]

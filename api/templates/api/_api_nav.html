@@ -1,0 +1,43 @@
+{% load staticfiles i18n %}
+
+	<div class="row indent">
+		<div class="col-md-2">
+			<a href="{% url "statistic-api:teams-api" %}">GET /teams</a>
+		</div>
+		<div class="col-md-2">
+			<a href="{% url "statistic-api:players-api" %}">GET /players</a>
+		</div>
+		<div class="col-md-2">
+            <div class="dropdown">
+                <a class="dropdown-toggle" type="button" id="TeamsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    GET /teams/:teamId
+                    <span class="caret"></span>
+                </a>
+            <ul class="dropdown-menu" aria-labelledby="TeamsMenu">
+                {% for team in list_teams %}
+                <li><a href="{% url "statistic-api:team-api" team.id %}">{{ team.name }}</a></li>
+                {% endfor %}
+            </ul>
+            </div>
+		</div>
+        <div class="col-md-2">
+            <div class="dropdown">
+                <a class="dropdown-toggle" type="button" id="PlayersMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    GET /players/:playerId
+                    <span class="caret"></span>
+                </a>
+            <ul class="dropdown-menu" aria-labelledby="PlayersMenu">
+                {% for player in list_players %}
+                <li><a href="{% url "statistic-api:player-api" player.id %}">{{ player.name }} ({{ player.team }})</a></li>
+                {% endfor %}
+            </ul>
+            </div>
+		</div>
+		<div class="col-md-2">
+			<a href="{% url "statistic-api:create-team-api" %}">POST /team</a>
+		</div>
+		<div class="col-md-2">
+			<a href="{% url "statistic-api:create-player-api" %}">POST /player</a>
+		</div>
+	</div>
+

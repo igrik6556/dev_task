@@ -1,0 +1,7 @@
+*~
+*.pyc
+*.sqlite3
+/.idea
+/blog/local_settings.py
+/blog/prod_settings.py
+/media

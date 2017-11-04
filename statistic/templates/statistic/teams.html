@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block title %}{% trans "List of teams" %}{% endblock title %}
+
+{% block content %}
+<table class="table table-responsive table-bordered">
+    <tr>
+        <th>{% trans "Team name" %}</th>
+        <th>{% trans "Team city" %}</th>
+        <th>{% trans "Number of players" %}</th>
+        <th>{% trans "Goals qusantity" %}</th>
+        <th>{% trans "Team score" %}</th>
+    </tr>
+{% for team in teams|dictsortreversed:"get_stats" %}
+    <tr>
+        <td><a href="{% url "statistic:players" team.id %}">{{ team.name }}</a></td>
+        <td>{{ team.city }}</td>
+        <td>{{ team.get_team_players }}</td>
+        <td>{{ team.get_team_goals.goals__sum }}</td>
+        <td>{{ team.get_stats|floatformat }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock content %}

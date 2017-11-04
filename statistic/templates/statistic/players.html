@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block title %}{% trans "List of players in team" %}{% endblock title %}
+
+{% block api %}{% endblock api %}
+{% block sub_title %}
+<h3 class="text-center" style="color: #45a23b">{% trans "Players of team" %} "{{ players.0.team }}" {{team}}</h3>
+{% endblock sub_title %}
+
+{% block content %}
+<table class="table table-responsive table-bordered">
+    <tr>
+        <th>{% trans "Name" %}</th>
+        <th>{% trans "Age" %}</th>
+        <th>{% trans "Height" %}</th>
+        <th>{% trans "Experience" %}</th>
+        <th>{% trans "Goals" %}</th>
+    </tr>
+{% for player in players %}
+    <tr>
+        <td>{{ player.name }}</td>
+        <td>{{ player.age }}</td>
+        <td>{{ player.height }}</td>
+        <td>{{ player.experience }}</td>
+        <td>{{ player.goals }}</td>
+    </tr>
+    {% empty%}
+    <tr>
+        <td colspan="5" class="text-center">{% trans "No players in this team" %}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock content %}
